@@ -5,6 +5,7 @@ VIEWER=mupdf
 
 default: $(SOURCES)
 	pdflatex -jobname $(DOCNAME) main.tex
+	make clear
 
 view: default
 	$(VIEWER) $(DOCNAME).pdf
