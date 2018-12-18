@@ -15,33 +15,33 @@
 		"label": "Experiência"
 		,"list": [
 			{
-				"company":       "JOYCAR - Carsharing"
-				,"period":       "Período integral"
-				,"start-date":   "2017"
-				,"closing-date": "2018"
-				,"occupation":   "Analista de Sistemas"
-				,"description":  "Desenvolvimento de firmwares para automação automotiva C/C++ para microcontroladores na plataforma Arduino e Python para Linux embarcado na plataforma BeagleBone. Controle de portas e ignição; Leitura de dados OBD; Recuperação e persistência de dados em EEPROM; Comunicação com smartfones via bluetooth e com servidores via socket e SMS."
+				"company":       {"label": "", "value": "JOYCAR - Carsharing"}
+				,"period":       {"label": "", "value": "Período integral"}
+				,"start-date":   {"label": "", "value": "2017"}
+				,"closing-date": {"label": "", "value": "2018"}
+				,"occupation":   {"label": "", "value": "Analista de Sistemas"}
+				,"description":  {"label": "", "value": "Desenvolvimento de firmwares para automação automotiva C/C++ para microcontroladores na plataforma Arduino e Python para Linux embarcado na plataforma BeagleBone. Controle de portas e ignição; Leitura de dados OBD; Recuperação e persistência de dados em EEPROM; Comunicação com smartfones via bluetooth e com servidores via socket e SMS."}
 			}, {
-				"company":       "FORIP - Tecnologia"
-				,"period":       "Período integral"
-				,"start-date":   "2015"
-				,"closing-date": "2016"
-				,"occupation":   "Técnico em redes Linux"
-				,"description":  "Desenvolvimento de sistema web, baseado no framework Python Web2py, integrado com serviço PABX Asterisk; Criação de extensão Firefox e Chrome para monitoramento de ramais e ligações; Elaboração de relatórios com Pentaho; Administração de servidores Debian Asterisk; Atendimento aos clientes."
+				"company":       {"label": "", "value": "FORIP - Tecnologia"}
+				,"period":       {"label": "", "value": "Período integral"}
+				,"start-date":   {"label": "", "value": "2015"}
+				,"closing-date": {"label": "", "value": "2016"}
+				,"occupation":   {"label": "", "value": "Técnico em redes Linux"}
+				,"description":  {"label": "", "value": "Desenvolvimento de sistema web, baseado no framework Python Web2py, integrado com serviço PABX Asterisk; Criação de extensão Firefox e Chrome para monitoramento de ramais e ligações; Elaboração de relatórios com Pentaho; Administração de servidores Debian Asterisk; Atendimento aos clientes."}
 			}, {
-				"company":       "UNIFRAN - Universidade de Franca"
-				,"period":       "Período integral"
-				,"start-date":   "2012"
-				,"closing-date": "2014"
-				,"occupation":   "Monitor de Informática"
-				,"description":  "Suporte aos setores acadêmicos da universidade; Criação e execução de rotinas de instalação de softwares; Manutenção dos computadores; Orientação dos estagiários nas tarefas do laboratório."
+				"company":       {"label": "", "value": "UNIFRAN - Universidade de Franca"}
+				,"period":       {"label": "", "value": "Período integral"}
+				,"start-date":   {"label": "", "value": "2012"}
+				,"closing-date": {"label": "", "value": "2014"}
+				,"occupation":   {"label": "", "value": "Monitor de Informática"}
+				,"description":  {"label": "", "value": "Suporte aos setores acadêmicos da universidade; Criação e execução de rotinas de instalação de softwares; Manutenção dos computadores; Orientação dos estagiários nas tarefas do laboratório."}
 			}, {
-				"company":       "UNIFRAN - Universidade de Franca"
-				,"period":       "Meio período"
-				,"start-date":   "2011"
-				,"closing-date": "2012"
-				,"occupation":   "Estagiário"
-				,"description":  "Auxílio de professores e alunos na utilização dos equipamentos e programas do laboratóio."
+				"company":       {"label": "", "value": "UNIFRAN - Universidade de Franca"}
+				,"period":       {"label": "", "value": "Meio período"}
+				,"start-date":   {"label": "", "value": "2011"}
+				,"closing-date": {"label": "", "value": "2012"}
+				,"occupation":   {"label": "", "value": "Estagiário"}
+				,"description":  {"label": "", "value": "Auxílio de professores e alunos na utilização dos equipamentos e programas do laboratóio."}
 			}
 		]
 	}
@@ -50,23 +50,23 @@
 		"label": "Educação"
 		,"list": [
 			{
-				"institute":     "UFSCar - Universidade Federal de São Carlos."
-				,"title":        "Mestrado em Ciência da Computação"
-				,"description":  "Linha de pesquisa: Sistemas de Automação e Robótica; Orientador: Prof. D.r. Orides Morandin Junior."
-				,"start-date":   "2016"
-				,"closing-date": "locked"
+				"institute":     {"label": "", "value": "UFSCar - Universidade Federal de São Carlos."}
+				,"title":        {"label": "", "value": "Mestrado em Ciência da Computação"}
+				,"description":  {"label": "", "value": "Linha de pesquisa: Sistemas de Automação e Robótica; Orientador: Prof. D.r. Orides Morandin Junior."}
+				,"start-date":   {"label": "", "value": "2016"}
+				,"closing-date": {"label": "", "value": "locked"}
 			}, {
-				"institute":     "UNIFRAN - Universidade de Franca"
-				,"title":        "Bacharelado em Ciência da Computação"
-				,"description":  "TCC: OpenGL Aplicado ao Desenvolvimento de Jogos Eletrônicos; Orientador: Prof. M.e. Alysson Naves."
-				,"start-date":   "2011"
-				,"closing-date": "2014"
+				"institute":     {"label": "", "value": "UNIFRAN - Universidade de Franca"}
+				,"title":        {"label": "", "value": "Bacharelado em Ciência da Computação"}
+				,"description":  {"label": "", "value": "TCC: OpenGL Aplicado ao Desenvolvimento de Jogos Eletrônicos; Orientador: Prof. M.e. Alysson Naves."}
+				,"start-date":   {"label": "", "value": "2011"}
+				,"closing-date": {"label": "", "value": "2014"}
 			}, {
-				"institute":     "ETEC Dr. Júlio Cardoso"
-				,"title":        "Técnico de Informática"
-				,"description":  ""
-				,"start-date":   "2008"
-				,"closing-date": "2009"
+				"institute":     {"label": "", "value": "ETEC Dr. Júlio Cardoso"}
+				,"title":        {"label": "", "value": "Técnico de Informática"}
+				,"description":  {"label": "", "value": ""}
+				,"start-date":   {"label": "", "value": "2008"}
+				,"closing-date": {"label": "", "value": "2009"}
 			}
 		]
 	}
@@ -75,14 +75,14 @@
 		"label": "Habilidades"
 		,"list": [
 			{
-				"name":         "GNU/Linux"
-				,"description": "Debian, Archlinux"
+				"name":         {"label": "", "value": "GNU/Linux"}
+				,"description": {"label": "", "value": "Debian, Archlinux"}
 			},{
-				"name":         "Linguagens"
-				,"description": "C/C++ (STL, Qt, OpenGL)\nPython (Django, Flask, Web2py)\nJavascript, Bash"
+				"name":         {"label": "", "value": "Linguagens"}
+				,"description": {"label": "", "value": "C/C++ (STL, Qt, OpenGL)\\\\\\\\Python (Django, Flask, Web2py)\\\\\\\\Javascript, Bash"}
 			},{
-				"name":         "Ferramentas"
-				,"description": "Scrum, UML, Git, Regex, Makefile, GDB7, Vim, Latex"
+				"name":         {"label": "", "value": "Ferramentas"}
+				,"description": {"label": "", "value": "Scrum, UML, Git, Regex, Makefile, GDB7, Vim, Latex"}
 			}
 		]
 	}

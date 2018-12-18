@@ -10,12 +10,11 @@ BUILDDIR=build
 INFO=$$(cat $(CONFIG) | egrep "INFO=" | egrep -io "[^=]*\.json$$")
 TEMPLATE=$$(cat $(CONFIG) | egrep "TEMPLATE=" | egrep -io "[^=]*\.tex$$")
 
-#default: make_dir
-default:
+default: make_dir
 	@clear
 	@python $(SCRIPT) $(INFO) $(TEMPLATE) $(BUILDDIR)
-	#@cd $(BUILDDIR); pdflatex -jobname $(DOCNAME) output.tex
-	#@mv $(BUILDDIR)/$(DOCNAME).pdf $(BACKUPDIR)
+	@cd $(BUILDDIR); pdflatex -jobname $(DOCNAME) output.tex
+	@mv $(BUILDDIR)/$(DOCNAME).pdf $(BACKUPDIR)
 
 
 make_dir:

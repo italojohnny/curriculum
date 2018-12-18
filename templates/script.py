@@ -1,7 +1,15 @@
+import time
 import sys
 import os
 import json
 import re
+
+variable  = r'[A-z_][\w_-]*'
+variables = r'(%s)(\.%s)*' % (variable, variable)
+t_print   = re.compile(r'< print (%s) >' % variables)
+t_for     = re.compile(r'< for (%s) in (%s) >(.*?)< endfor >' % (variable, variables), re.M | re.S)
+t_if      = re.compile(r'< if (%s) >(.*?)< endif >' % variables, re.M | re.S)
+
 
 # {{{
 def main (args):
@@ -14,67 +22,29 @@ def main (args):
     template    = load_template_file(args[2])
     path_output = "%s/output.tex" % args[3]
 
-    output = parser(template, dictionary)
+    output = compiler(template, dictionary)
+    save_output_file(path_output, output)
+    #sys.exit(0)
 
-    #save_output_file(path_output, output) # TODO DESCOMENTAR ESSA LINHA
-    sys.exit(0)
 
+def get_value (string, dictionary):
+    value = dictionary
+    keys = string.split('.')
+    for key in keys:
+        if key in value.keys():
+            value = value[key]
+        else:
+            return string
+    return value
 # }}}
-def parser (template, dictionary):
-    import pdb
-    stack = list()
-
-    index = 0
-    size = len(template)
-    while index < size:
-        char = template[index]
-
-        if char == '<':
-            stack.append(index)
-
-        elif char == '>':
-            start = stack.pop(-1)
-            end   = index+1
-
-            value = get_value(template[start:end], dictionary)
-
-            first_part = template[:start]
-            last_part = template[end:]
-            template = first_part + value + last_part
-
-            size = len(template)
-            index = start + len(value)
-
-        index += 1
-
-    return template
-
-def get_value (s, d):
-
-    result = re.search(r'^< ([A-z0-9-]*[A-z0-9\.-]*) >$', s)
-
-    if result:
-        keys = result.group(1).split('.')
-        c = d
-        for key in keys:
-            if key in c.keys():
-                c = c[key]
-            else:
-                return s
-
-        return c
-    else:
-        return s
-
-
 # {{{
 def save_output_file (path_output, output):
     try:
         output_file = open(path_output, "w")
         output_file.write(output)
         output_file.close()
-    except:
-        error_msg("Falha inesperada no salvamento do arquivo '%s'" % path_output, 7)
+    except Exception as e:
+        error_msg("Falha inesperada no salvamento do arquivo '%s'\n%s" % (path_output, e), 7)
 
 
 def load_template_file (path_file):
@@ -111,7 +81,6 @@ def check_parameters_amount (args):
 
 
 def check_directory_exist (d):
-    return True # TODO REMOVER ESSA LINHA
     if not os.path.isdir(d):
         warning_msg("Diretorio '%s' nao existe." % d)
         try:
@@ -138,4 +107,53 @@ def error_msg (msg, exit_code):
     sys.exit(exit_code)
 # }}}
 
-if __name__ == "__main__": main(sys.argv)
+def compiler (template, dictionary):
+    index = 0
+    size = len(template)
+    stack = list()
+
+    while index < size:
+        char = template[index]
+
+        if char == '<':
+            stack.append(index)
+
+        if char == '>' and len(stack) > 0:
+            start = stack.pop(-1)
+            end   = index +1
+            tag   = template[start:end]
+
+            if tag.startswith('< print'):
+                result = t_print.search(template)
+                value = get_value(result.group(1), dictionary)
+                template = t_print.sub(value, template, 1)
+                index = 0
+                size = len(template)
+
+            elif tag.startswith('< for'):
+                result = t_for.search(template)
+                values = get_value(result.group(2), dictionary)
+                iterator = result.group(1)
+                last_element = len(result.groups())
+
+                sub_template = result.group(last_element)
+                sub_dictionary = dictionary
+                new_template = ""
+                for i, value in enumerate(values):
+                    sub_dictionary[iterator] = values[i]
+                    new_template += compiler(sub_template, sub_dictionary)
+                template =  template[:result.span()[0]] + \
+                        new_template + \
+                        template[result.span()[1]:]
+                index = 0
+                size = len(template)
+
+        index += 1
+    return template
+
+
+if __name__ == "__main__":
+    start_time = time.time()
+    main(sys.argv)
+    print("%s seconds" % (time.time() - start_time))
+    sys.exit(0)

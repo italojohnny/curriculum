@@ -22,6 +22,7 @@
 		\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
 		\sectionrule{0pt}{0pt}{-5pt}{3pt}}
 
+
 	%%% Macros
 	%%% ------------------------------------------------------------
 	\newlength{\spacebox}
@@ -72,44 +73,44 @@
 
 \begin{document}
 
-	\MyName{< detail.first-name.value >}
+	\MyName{< print detail.first-name.value >}
 	\MySlogan{Curriculum Vitae}
 	\sepspace
 
 
-	\NewPart{< detail.label >}{}
-	\PersonalEntry{< detail.birth.label >}{< detail.birth.value >}
-	\PersonalEntry{< detail.city.label >}{< detail.city.value >}
-	\PersonalEntry{< detail.phone.label >}{< detail.phone.value >}
-	\PersonalEntry{< detail.email.label >}{\url{< detail.email.value >}}
-	\PersonalEntry{< detail.linkedin.label >}{\url{< detail.linkedin.value >}}
-	\PersonalEntry{< detail.github.label >}{\url{< detail.github.value >}}
+	\NewPart{< print detail.label >}{}
+	\PersonalEntry{< print detail.birth.label >}{< print detail.birth.value >}
+	\PersonalEntry{< print detail.city.label >}{< print detail.city.value >}
+	\PersonalEntry{< print detail.phone.label >}{< print detail.phone.value >}
+	\PersonalEntry{< print detail.email.label >}{\url{< print detail.email.value >}}
+	\PersonalEntry{< print detail.linkedin.label >}{\url{< print detail.linkedin.value >}}
+	\PersonalEntry{< print detail.github.label >}{\url{< print detail.github.value >}}
 
-%{{{
-	\NewPart{< experiences.label >}{}
+
+	\NewPart{< print experiences.label >}{}
 	< for xp in experiences.list >
-		\EducationEntry{< xp.occupation >}
-		{< xp.start-date > - < xp.closing-date >\space\space\space\space}
-		{< xp.company>., < xp.period >}
-		{< xp.description >}
+		\EducationEntry{< print xp.occupation.value >}
+		{< print xp.start-date.value > - < print xp.closing-date.value >\space\space\space\space}
+		{< print xp.company.value >., < print xp.period.value >}
+		{< print xp.description.value >}
 		\sepspace
 	< endfor >
 	\newpage
 
 
-	\NewPart{< educations.label >}{}
+	\NewPart{< print educations.label >}{}
 	< for ed in educations.list >
-		\EducationEntry{< ed.title >}{< ed.start-date > - < ed.closing-date > \space\space\space\space\space}
-		{< ed.institute >}
-		{< ed.description >}
+		\EducationEntry{< print ed.title.value >}{< print ed.start-date.value > - < print ed.closing-date.value > \space\space\space\space\space}
+		{< print ed.institute.value >}
+		{< print ed.description.value >}
 		\sepspace
 	< endfor >
 
 
-	\NewPart{< skills.label >}{}
+	\NewPart{< print skills.label >}{}
 	< for sk in skills.list >
-		\SkillsEntry{< sk.name >}{< sk.description >}
+		\SkillsEntry{< print sk.name.value >}{< print sk.description.value >}
 		\SkillsEntry{}{}
 	< endfor >
-%}}}
+
 \end{document}
