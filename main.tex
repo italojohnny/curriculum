@@ -1,44 +1,14 @@
 \documentclass[paper=a4,fontsize=12pt]{scrartcl} % KOMA-article class
 
-	\input{conf}
-
-\usepackage{float}
-\usepackage{wrapfig}
+	%< include "conf.tex" >%
 
 % sans-serif
 %\renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
 
-	%%--------------------------------------------------------------------------
-	%%% Photo
-	%\begin{wrapfigure}{l}{0.5\textwidth}
-	%	\vspace*{-2em}
-	%		\includegraphics[width=0.15\textwidth]{images/perfil.jpg}
-	%\end{wrapfigure}
-
-
-	%%--------------------------------------------------------------------------
-	\MyName{Ítalo Johnny}
-	\MySlogan{Curriculum Vitae}
-	\sepspace
-
-	\input{detail}
-
-	\input{experience}
-	\newpage
-
-	\input{education}
-
-	\input{skill}
-	%%\input{others}
-
-
-	%%--------------------------------------------------------------------------
-	%\NewPart{Idiomas}{}
-	%\SkillsEntry{Português}{Nativo 	(Leitura, escrita e diálogo são fluentes)}
-	%\SkillsEntry{Inglês}{Intermediário (Leitura e escrita são razoaveis)}
-	%\SkillsEntry{Francês}{Intermediário	(Leitura e escrita são boas)}
+	%< block content >%
+	%< endblock >%
 
 
 \end{document}

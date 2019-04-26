@@ -1,2 +1,0 @@
-TEMPLATE=default.tex
-INFO=pt-br.json

@@ -1,0 +1,96 @@
+{
+	"detail": {
+		"label":       "Detalhes"
+		,"firstname": {"label": "None",       "value": "Italo Johnny"}
+		,"lastname":  {"label": "Sobrenome",  "value": "dos Anjos"}
+		,"birth":     {"label": "Nascimento", "value": "23 de Março de 1989"}
+		,"city":      {"label": "Cidade",     "value": "Sao Paulo, SP"}
+		,"phone":     {"label": "Telefone",   "value": "+55(16)99108-5414"}
+		,"email":     {"label": "Email",      "value": "italojohnnydosanjos@gmail.com"}
+		,"linkedin":  {"label": "Linkedin",   "value": "https://linkedin.com/in/italojohnny"}
+		,"github":    {"label": "Github",     "value": "https://github.com/italojohnny"}
+	}
+
+	,"experiences": {
+		"label": "Experiência"
+		,"list": [
+			{
+				"company":      {"label": "", "value": "Software Express"}
+				,"period":      {"label": "", "value": "Período integral"}
+				,"startdate":   {"label": "", "value": "2019"}
+				,"closingdate": {"label": "", "value": "current"}
+				,"occupation":  {"label": "", "value": "Analista de Desenvolvedor"}
+				,"description": {"label": "", "value": ""}
+			}, {
+				"company":      {"label": "", "value": "JOYCAR - Carsharing"}
+				,"period":      {"label": "", "value": "Período integral"}
+				,"startdate":   {"label": "", "value": "2017"}
+				,"closingdate": {"label": "", "value": "2018"}
+				,"occupation":  {"label": "", "value": "Analista de Sistemas"}
+				,"description": {"label": "", "value": "Desenvolvimento de firmwares para automação automotiva C/C++ para microcontroladores na plataforma Arduino e Python para Linux embarcado na plataforma BeagleBone. Controle de portas e ignição; Leitura de dados OBD; Recuperação e persistência de dados em EEPROM; Comunicação com smartfones via bluetooth e com servidores via socket e SMS."}
+			}, {
+				"company":      {"label": "", "value": "FORIP - Tecnologia"}
+				,"period":      {"label": "", "value": "Período integral"}
+				,"startdate":   {"label": "", "value": "2015"}
+				,"closingdate": {"label": "", "value": "2016"}
+				,"occupation":  {"label": "", "value": "Técnico em redes Linux"}
+				,"description": {"label": "", "value": "Desenvolvimento de sistema web, baseado no framework Python Web2py, integrado com serviço PABX Asterisk; Criação de extensão Firefox e Chrome para monitoramento de ramais e ligações; Elaboração de relatórios com Pentaho; Administração de servidores Debian Asterisk; Atendimento aos clientes."}
+			}, {
+				"company":      {"label": "", "value": "UNIFRAN - Universidade de Franca"}
+				,"period":      {"label": "", "value": "Período integral"}
+				,"startdate":   {"label": "", "value": "2012"}
+				,"closingdate": {"label": "", "value": "2014"}
+				,"occupation":  {"label": "", "value": "Monitor de Informática"}
+				,"description": {"label": "", "value": "Suporte aos setores acadêmicos da universidade; Criação e execução de rotinas de instalação de softwares; Manutenção dos computadores; Orientação dos estagiários nas tarefas do laboratório."}
+			}, {
+				"company":      {"label": "", "value": "UNIFRAN - Universidade de Franca"}
+				,"period":      {"label": "", "value": "Meio período"}
+				,"startdate":   {"label": "", "value": "2011"}
+				,"closingdate": {"label": "", "value": "2012"}
+				,"occupation":  {"label": "", "value": "Estagiário"}
+				,"description": {"label": "", "value": "Auxílio de professores e alunos na utilização dos equipamentos e programas do laboratóio."}
+			}
+		]
+	}
+
+	,"educations": {
+		"label": "Educação"
+		,"list": [
+			{
+				"institute":    {"label": "", "value": "UFSCar - Universidade Federal de São Carlos."}
+				,"title":       {"label": "", "value": "Mestrado em Ciência da Computação"}
+				,"description": {"label": "", "value": "Linha de pesquisa: Sistemas de Automação e Robótica;\\\\Orientador: Prof. D.r. Orides Morandin Junior."}
+				,"startdate":   {"label": "", "value": "2016"}
+				,"closingdate": {"label": "", "value": "locked"}
+			}, {
+				"institute":    {"label": "", "value": "UNIFRAN - Universidade de Franca"}
+				,"title":       {"label": "", "value": "Bacharelado em Ciência da Computação"}
+				,"description": {"label": "", "value": "TCC: OpenGL Aplicado ao Desenvolvimento de Jogos Eletrônicos;\\\\Orientador: Prof. M.e. Alysson Naves."}
+				,"startdate":   {"label": "", "value": "2011"}
+				,"closingdate": {"label": "", "value": "2014"}
+			}, {
+				"institute":    {"label": "", "value": "ETEC Dr. Júlio Cardoso"}
+				,"title":       {"label": "", "value": "Técnico de Informática"}
+				,"description": {"label": "", "value": ""}
+				,"startdate":   {"label": "", "value": "2008"}
+				,"closingdate": {"label": "", "value": "2009"}
+			}
+		]
+	}
+
+	,"skills": {
+		"label": "Habilidades"
+		,"list": [
+			{
+				"name":         {"label": "", "value": "GNU/Linux"}
+				,"description": {"label": "", "value": "Debian, Archlinux"}
+			},{
+				"name":         {"label": "", "value": "Linguagens"}
+				,"description": {"label": "", "value": "C/C++ (STL, Qt, OpenGL)\\\\\\\\Python (Django, Flask, Web2py)\\\\\\\\Javascript, Bash"}
+			},{
+				"name":         {"label": "", "value": "Ferramentas"}
+				,"description": {"label": "", "value": "Scrum, UML, Git, Regex, Makefile, GDB7, Vim, Latex"}
+			}
+		]
+	}
+}

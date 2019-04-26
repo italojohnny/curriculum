@@ -1,0 +1,82 @@
+%< extends "main.tex" >%
+%< block content >%
+
+%%------------------------------------------------------------------------------
+%%% Photo
+%\begin{wrapfigure}{l}{0.5\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.15\textwidth]{images/perfil.jpg}
+%\end{wrapfigure}
+
+
+\MyName{< print detail.firstname.value >} %%------------------------------------
+\MySlogan{Curriculum Vitae}
+\sepspace
+
+
+\NewPart{< print detail.label >}{} %%-------------------------------------------
+\PersonalEntry{< print detail.birth.label >}{< print detail.birth.value >}
+\PersonalEntry{< print detail.city.label >}{< print detail.city.value >}
+\PersonalEntry{< print detail.phone.label >}{< print detail.phone.value >}
+\PersonalEntry{< print detail.email.label >}{\url{< print detail.email.value >}}
+\PersonalEntry{< print detail.linkedin.label >}{\url{< print detail.linkedin.value >}}
+\PersonalEntry{< print detail.github.label >}{\url{< print detail.github.value >}}
+
+
+\NewPart{< print experiences.label >}{} %%--------------------------------------
+%< for xp in experiences.list >%
+	\EducationEntry{< print xp.occupation.value >}
+	%< if xp.closingdate.value == "current" >%
+		{< print xp.startdate.value >\space\space\space\space\space\space\space\space}
+	%< else >%
+		{< print xp.startdate.value > - < print xp.closingdate.value >\space\space\space\space}
+	%< endif >%
+	{< print xp.company.value >., < print xp.period.value >}
+	{< print xp.description.value >}
+	\sepspace
+%< endfor >%
+\newpage
+
+
+\NewPart{< print educations.label >}{} %%---------------------------------------
+%< for ed in educations.list >%
+	\EducationEntry{< print ed.title.value >}
+	%< if ed.closingdate.value == "locked" >%
+		{< print ed.startdate.value >\space\space\space\space\space\space\space\space}
+	%< else >%
+		{< print ed.startdate.value > - < print ed.closingdate.value > \space\space\space\space\space}
+	%< endif >%
+	{< print ed.institute.value >}
+	{< print ed.description.value >}
+	\sepspace
+%< endfor >%
+
+
+\NewPart{< print skills.label >}{} %%-------------------------------------------
+%< for sk in skills.list >%
+	\SkillsEntry{< print sk.name.value >}{< print sk.description.value >}
+	\SkillsEntry{}{}
+%< endfor >%
+
+
+%\NewPart{Cursos}{} %%----------------------------------------------------------
+%\EducationEntry{Raspberry Pi}{15h\space\space\space\space\space\space\space\space\space}
+%{Introdução a sistemas embarcados, controle GPIO e servidor web.}{}
+
+%\EducationEntry{Arduino}{20h\space\space\space\space\space\space\space\space\space}
+%{Introdução e práticas em projetos com sensores e motores.}{}
+
+%\EducationEntry{JmonkeyEngine}{5h\space\space\space\space\space\space\space\space\space}
+%{Desenvolvimento de Jogos 3D em Java com JmonkeyEngine.}{}
+
+%\EducationEntry{Introdução ao \LaTeX}{10h\space\space\space\space\space\space\space\space\space}
+%{Linguagem de marcação para produção de textos matemáticos e físicos.}{}
+
+
+%%------------------------------------------------------------------------------
+%\NewPart{Idiomas}{}
+%\SkillsEntry{Português}{Nativo 	(Leitura, escrita e diálogo são fluentes)}
+%\SkillsEntry{Inglês}{Intermediário (Leitura e escrita são razoaveis)}
+%\SkillsEntry{Francês}{Intermediário	(Leitura e escrita são boas)}
+
+%< endblock >%
