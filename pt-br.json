@@ -20,7 +20,7 @@
 				,"startdate":   {"label": "", "value": "2019"}
 				,"closingdate": {"label": "", "value": "current"}
 				,"occupation":  {"label": "", "value": "Analista de Desenvolvedor"}
-				,"description": {"label": "", "value": ""}
+				,"description": {"label": "", "value": "Correções de bugs e customizações em módulos de Transação Eletrônica de Fundos usando Linguagem C. Automatização dos processos de documentação interna e assinatura digital usando Latex e Python."}
 			}, {
 				"company":      {"label": "", "value": "JOYCAR - Carsharing"}
 				,"period":      {"label": "", "value": "Período integral"}

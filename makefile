@@ -4,7 +4,7 @@ VIEWER=mupdf -r 60
 
 
 default: $(SOURCES)
-	python main.py
+	python3 script.py
 	pdflatex -jobname ./build/$(DOCNAME) ./build/output.tex
 	make clear
 
